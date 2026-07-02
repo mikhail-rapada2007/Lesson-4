@@ -27,3 +27,12 @@ parvase(without sql) is a non-relational database
 6. python manage.py makemigrations
    python manage.py migrate
    do this to make tables
+
+
+7. to make admin acc
+   python manage.py createsuperuser
+   give name and password
+   now you can access admin.py
+
+8. Function and Method
+   Class can have functions and methods. Functions can have methods. Methods are baseline

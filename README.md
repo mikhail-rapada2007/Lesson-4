@@ -35,4 +35,32 @@ parvase(without sql) is a non-relational database
    now you can access admin.py
 
 8. Function and Method
-   Class can have functions and methods. Functions can have methods. Methods are baseline
+   Class can have functions and methods. Functions can have methods. Methods are baseline.
+
+9. CRUD
+a webapplication has create, read, update, delete.
+We start with read to analyze data first since you cannot create, update, delete something you cant read.
+
+10. Include another url configuration. django makes it easy. urls.py in the main proj can just include() the urls in tweets
+
+11. how to connect url patterns in different folders?
+   11.1 yo what is query set
+
+12. Context Dictionary
+13. keyvaluepair
+14. template_tags; we need to convert python to html using this; {{}} -> python objects ;  {% %}-> python functions
+
+new code in views.py of tweets
+from django.shortcuts import render
+from .models import *
+
+# Create your views here.
+def list_view(request):
+    my_tweets = Tweet.objects.all()
+    print(my_tweets)
+    context = {
+        'qs': my_tweets,
+    }
+    
+    return render(request, 'tweets/list.html', context)
+
